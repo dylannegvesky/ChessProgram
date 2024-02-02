@@ -1,2 +1,10 @@
 # ChessProgram
 Chess class declaration, definition, and use within a sample driver file.
+
+"pieces.h" is the header file for the class. This file includes the class definitions for the pieces being used: Pawn, Rook, Knight, and King. Every class (piece) has the following public members: Move function, a getter for the x position, a getter for the y position, as well as a default constructor. Every class also has the following private members, an integer representing the x position, an integer representing the y position, and a boolean returning function that will check the validity of a user's move. In the case of the "Pawn" class, there is another private data member named "firstMove," that tracks whether it is a given pawns first move or not.
+
+"pieces2.cpp" contains the definitions for all of the functions mentioned above for each class. All of the Move functions are notably similar amongst all of the pieces, with all main movement differences contained within a piece's private Move Validity checking function that is called from within the Move function itself. The getters for x and y coordinates are fairly self-explanatory with a glance at the definition. Each default constructor is currently set to a hard coded position on the board when an object of each piece is created. In a scenario in which I was marketing this as an actually playable chess program, these coordinates would be removed; alternatively, I may add another constructor that takes in parameters for a starting position for the creation of a new piece (with checks to ensure that it may not be misused).
+
+"chess2.cpp" is the driver file. In this case it is a simple implementation of 1 of each of the classes. The chess board being used is 10x10 for more free-range with the movement of the pieces. This program displays a menu for the user to select which piece they would like to move and where they would like to move it to. This file also contains the creation and implementation of the chess board itself; in this case, I used a 2-D array to keep track of where all of the pieces are at any given time.
+
+Enjoy!
